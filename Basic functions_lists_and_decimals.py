@@ -62,4 +62,24 @@ print("%.3f"%var)
 print(f"denne koden printer denne variablen {var}")
 
 
+########################### .zfill() ###########################
+
+# zfill fyller inn 0er før celleverdien til antall elementer er 3 (i dette tilfellet). zfill er sensitiv Nan så de vil ikke bli fylt
+
+df['var2'] = df['var1'].str.zfill(3)
+
+# Om vi derimot ønsker å fylle alle cellene med en string verdi ('0' i dette tilfellet) så bruker vi koden under
+
+df['var2'] = ('0' + df['var1'].astype(str))
+
+
+
+
+
+
+
+
+
+
+
 
