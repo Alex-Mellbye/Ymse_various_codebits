@@ -1,3 +1,24 @@
+###################### SAS Proc freq med 'where' statement ########################
+
+# Here I run a Python versjon of the SAS proc freq command with a where statement (in this case where col1 is missing).
+# I input the name of the dataset (v02001b), and the two relevant variables [pandas.series] ('avgjpers' and 'statusrollekid').
+
+def frek_ved_missing(df, col1, col2):
+
+    display(df.loc[df[col1].isnull()][col2].value_counts(dropna=False))
+
+frek_ved_missing(v02001b, 'avgjpers', 'statusrollekid')
+
+
+
+
+
+
+
+
+
+
+
 ############### Functions ####################
 
 # Returning a print as the product isnt always a good idea, but it does work in this simple case. 
