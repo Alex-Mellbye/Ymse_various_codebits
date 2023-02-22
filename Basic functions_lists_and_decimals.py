@@ -9,14 +9,17 @@ def frek_ved_missing(df, col1, col2):
 
 frek_ved_missing(v02001b, 'avgjpers', 'statusrollekid')
 
+# If I do not wish to make a function I can also write it directly like so:
 
+display(df.loc[df['col1'].isnull()]['col2'].value_counts(dropna=False))
 
+# If I wish to have more conditions I can write it like this;
 
+display(df.loc[(df['col1'].isnull()) & (df['col2'].notna())]['col3'].value_counts(dropna=False))
 
-
-
-
-
+# In this code I am applying a 'mask' - i.e. Im not changing the data directly but creating a temporary copy on which I run the value_counts() command.
+# A filter if you like. 
+# And its all contained within the [ ] of the .loc function. 
 
 
 ############### Functions ####################
