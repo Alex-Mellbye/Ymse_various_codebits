@@ -1,4 +1,22 @@
 
+####################################### How to get value_counts output as a dataframe #########################
+
+value_counts = df['var'].value_counts(dropna=True, sort=True)
+
+# solution here
+df_val_counts = pd.DataFrame(value_counts)
+df_value_counts_reset = df_val_counts.reset_index()
+df_value_counts_reset.columns = ['unique_values', 'counts']
+
+print(df_value_counts_reset.head())
+print(df_value_counts_reset.info())
+
+
+
+
+
+
+
 
 ############### Functions ####################
 
