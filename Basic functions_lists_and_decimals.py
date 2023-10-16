@@ -1,4 +1,17 @@
 
+############################################ Lage ny variabel med bins fra numerisk variabel ###############33
+
+
+# Lager en ny variabel, 'inntektskategori' med utgangspunkt i verdiene o, 300000, og 600000 på
+# 'nettoformue'
+
+df['inntektskategori'] = pd.cut(
+    df['inntekt_etter_skatt'],
+    bins=[0, 300000, 600000, np.inf],
+    labels=['Lav', 'Middels', 'Høy'])
+
+
+
 ####################################### How to get value_counts output as a dataframe #########################
 
 value_counts = df['var'].value_counts(dropna=True, sort=True)
