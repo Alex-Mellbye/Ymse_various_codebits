@@ -1,4 +1,10 @@
 
+############################## Hvordan sjekke type for celleverdi - dette kan være annerledes fra kolonneverdi ############################
+
+print(type(df.loc[1, "var"]))
+
+# 1 representerer her celleraden. Tallet kan være hva som helst så lenge det er en rad index-basert
+
 ############################################ Lage ny variabel med bins fra numerisk variabel ###############33
 
 
